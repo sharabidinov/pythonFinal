@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">GalliFrey</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark transition: color 0.2 linier" href="{% url 'home' %}">Все поздраления</a>
+    <a class="p-2 text-dark" href="{% url 'about' %}">Про именинника</a>
+    <a class="p-2 text-dark" href="{% url 'create' %}">Поздравить</a>
+  </nav>
+
+</div>
+  <div class="container">
+	   {% block content %}{% endblock %}
+  <div>
+</div>
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-6 col-md">
+        <h5>Обратная связь</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Gmail</a></li>
+          <li><a class="text-muted" href="#">Instagram</a></li>
+          <li><a class="text-muted" href="#">telegram</a></li>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

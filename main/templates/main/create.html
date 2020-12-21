@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Поздравить
+{% endblock %}
+
+{% block content %}
+	<h1>Поздравление на день рождение</h1>
+	<form method='post'>
+		{% csrf_token %}
+		{{ form.title }}
+		{{ form.task }}<br>
+		<button type='submit' class='btn btn-success'>Поздравить</button>
+		<span>{{ error }}</span>
+
+	</form>
+{% endblock %}
